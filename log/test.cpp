@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Logging.h"
+#define LOG_NUM 1000000
 int main() {
 
     clock_t start = clock();
-    // Logger *log = new Logger("/ServerLog", 100);
-    for(int i = 1; i <= 1e6; i++) {
-        LOG << i << "log info error";
+    for(int i = 1; i <= LOG_NUM; i++) {
+        LOG << i << "this is log !!!!";
     }
     clock_t end = clock();
     printf("time: %f s\n", ((double)(end - start)) / CLOCKS_PER_SEC );
